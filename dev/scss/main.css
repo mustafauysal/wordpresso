@@ -740,7 +740,7 @@ h6 {
     .SectionLab li p {
       color: #666;
       margin-bottom: 20px; }
-    .SectionLab li a, .SectionLab li img {
+    .SectionLab li figure a, .SectionLab li img {
       display: block; }
     .SectionLab li img {
       width: 100%; }
@@ -761,7 +761,7 @@ h6 {
   margin-left: 53px;
   text-align: left;
   background-color: #fff;
-  border-top: 3px solid #444;
+  border-top: 3px solid #ee802f;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 3px; }
   .Event:before {
@@ -861,6 +861,9 @@ h6 {
       width: 100%;
       transform: translateX(-50%) translateY(-50%); }
 
+.Event__icon {
+  background-color: #ee802f; }
+
 @media all and (min-width: 41.25em) {
   .Event--figure .Event__content {
     padding-right: 200px; } }
@@ -904,6 +907,16 @@ h6 {
   border-color: #ea4c89; }
   .Event--dribbble span {
     background-color: #ea4c89; }
+
+.Event--rss {
+  border-color: #ee802f; }
+  .Event--rss span {
+    background-color: #ee802f; }
+
+.Event--github {
+  border-color: #171515; }
+  .Event--github span {
+    background-color: #171515; }
 
 .fa-twitter {
   color: #00acee; }
@@ -988,6 +1001,13 @@ h6 {
 .fa-github:hover {
   color: #fff;
   background-color: #171515; }
+
+.fa-rss {
+  color: #ee802f; }
+
+.fa-rss:hover {
+  color: #fff;
+  background-color: #ee802f; }
 
 .fa-stackexchange {
   color: #F47920; }

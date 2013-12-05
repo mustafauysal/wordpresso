@@ -2,14 +2,19 @@ WordPresso
 ================================
 Henuz bitmemistir.
 
-Demo: [http://ademilter.com/v3/](http://ademilter.com/v3/)
+###Demo
+[http://ademilter.com/v3/](http://ademilter.com/v3/)
 
 
-LAB
+Lab
 -------------------------
--
+* Calismalarinizi Lab bolumunde sergilemeniz icin "Lab" adinda kategori olusturmaniz ve ekliyeceginiz postlarin bu kategoriye baglamaniz gerekiyor.
+* Calismalariniza ozel alanlar ekleyerek, calismanizin gorseli ve baglanti adresini girmeniz gerekiyor.
 
-AKTIFLIK
+![lab icin gorsel ekleme](/other/lab-add-item.png)
+
+
+Aktiflik
 -------------------------
 Aktiflik icin ifttt receteleri kullanmamiz gerekiyor.
 Recetelerin tamamina [buradan ulasabilirsiniz](https://ifttt.com/p/ademilter).
@@ -29,3 +34,21 @@ Hangi etkinlikler var ?
 * twitter-tweet-share
 * dribbble-shot-share
 * dribbble-shot-like
+* imdb-checkins-update
+* imdb-watchlist-update
+* github-starred
+* github-gist-event
+* behance-work-share
+* pocket-add-url
+* ve surekli eklenecek... (sadece isinize yarayanlari kullanirsiniz.)
+
+Thanks
+-------------------------
+
+### Kullandigim eklentiler
+* [Curtain.js](https://github.com/Victa/curtain.js)
+* [moment.js](https://github.com/moment/moment/)
+* [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+* [BackgroundCheck](http://kennethcachia.com/background-check)
+* [Lazy Load](http://www.appelsiini.net/projects/lazyload)
+

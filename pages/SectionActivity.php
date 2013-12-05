@@ -17,7 +17,7 @@
 				}
 			}
 
-			$iconColor = "";
+			$iconColor = "rss";
 			$action = "paylaştı.";
 			$figure = false;
 
@@ -56,7 +56,7 @@
 			        $figure = true;
 			        break;
 			    case 'soundcloud-favorite':
-			    	$iconColor = "soundcloud";
+			    	$iconColor = "rss";
 			        $action = "şarkıyı beğendi.";
 			        $figure = true;
 			        break;
@@ -86,6 +86,26 @@
 			    	$iconColor = "dribbble";
 			        $action = "tasarımı beğendi.";
 			        $figure = true;
+			        break;
+			    case 'imdb-watchlist-update':
+			    	$iconColor = "rss";
+			        $action = "izleme listesine film ekledi.";
+			        break;
+			    case 'imdb-checkins-update':
+			    	$iconColor = "rss";
+			        $action = "yeni bir film izledi.";
+			        break;
+			    case 'github-starred':
+			    	$iconColor = "github";
+			        $action = "favorilere ekledi.";
+			        break;
+			    case 'github-gist-event':
+			    	$iconColor = "github";
+			        $action = "kod parçası paylaştı.";
+			        break;
+			    case 'behance-work-share':
+			    	$iconColor = "rss";
+			        $action = "çalışma paylaştı.";
 			        break;
 			};?>
 

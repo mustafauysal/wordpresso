@@ -1,0 +1,82 @@
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    @include base-font-family;
+    font-size: $base-font-size-mobile + px;
+    @include media {
+        font-size: $base-font-size-desktop + px;
+    }
+
+    line-height: $base-line-height;
+    color: $text-color;
+    background-color: #fff;
+    text-rendering: optimizeLegibility;
+}
+
+.Width {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 700px;
+}
+
+/* Link
+   ========================================================================== */
+
+a {
+    //color: #0079A8;
+    //color: #bc4b2b;
+    color: #DF4747;
+    text-decoration: none;
+    transition: color .2s;
+    &:hover, &:focus, &:active {
+        text-decoration: underline;
+    }
+}
+
+small {
+    @include font-size(12, 12);
+}
+
+p,
+blockquote {
+    hyphens: auto;
+    margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include title-font-family;
+    color: $heading-color;
+}
+
+h1, h2 {
+    line-height: 1;
+}
+
+h3, h4 {
+    line-height: 1.2;
+}
+
+h1 {
+    @include hg(32, 40);
+}
+
+h2 {
+    @include hg(26, 30);
+}
+
+h3 {
+    @include hg(20, 26);
+}
+
+h4 {
+    @include hg(18, 24);
+}
+
+h5 {}
+
+h6 {
+    @include hg(12, 14);
+}

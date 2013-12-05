@@ -1,0 +1,96 @@
+/**
+ * 1.2 /.SectionBlog
+ * ----------------------------------------------------------------------------
+ */
+
+.SectionBlog {
+}
+
+.BlogPost__header {
+    position: relative;
+    max-width: 300px;
+    height: 20px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    h6 {
+        position: relative;
+        z-index: 2;
+        padding: 0 10px;
+        display: inline-block;
+        margin-bottom: 0;
+        line-height: 20px;
+        color: #ddd;
+        font-weight: 400;
+        letter-spacing: 5px;
+        background-color: #fff;
+    }
+    &:before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        @include media {
+            top: 13px;
+        }
+    }
+}
+
+.BlogPost__meta {
+    li {
+        display: inline;
+        @include font-size(14, 16);
+        color: #bbb;
+        +li {
+            &:before {
+                content: ' · ';
+            }
+        }
+        a {
+            color: #bbb;
+        }
+    }
+}
+
+.BlogPost--last {
+    margin-bottom: pxToEm(50);
+    @include media {
+        margin-bottom: pxToEm(90, 'x2');
+    }
+    h2{
+        a {
+            color: #333;
+            @include hover;
+        }
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.BlogPost--archive {
+    background-color: #fff;
+    >ul>li+li {
+        margin-top: 30px;
+        &:before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            margin: 0 auto 30px;
+            background-color: #eee;
+        }
+    }
+    h4 {
+        margin-bottom: 5px;
+        a {
+            color: #333;
+            @include hover;
+        }
+    }
+    .Section__button{
+        margin: 60px 0 100px;
+    }
+}

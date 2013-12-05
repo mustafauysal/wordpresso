@@ -1,0 +1,44 @@
+.Sections {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+
+.Section {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 10px black(0.5);
+    transform: translateZ(0);
+
+    .Section__title{
+        @include font-size(40, 52);
+        line-height: 1;
+        letter-spacing: 5px;
+        color: #eee;
+        margin: 160px 0 60px;
+        @include media {
+            margin: 160px 0 80px;
+        }
+    }
+}
+
+.Section.hidden {
+    display: none;
+}
+
+.Section:first-child {
+    z-index: 2;
+}
+
+
+@import "index__SectionCover";
+@import "index__SectionBlog";
+@import "index__SectionLab";
+@import "index__SectionActivity";

@@ -1,0 +1,63 @@
+/**
+ * 1.1 /.SectionCover
+ * ----------------------------------------------------------------------------
+ */
+
+.SectionCover {
+    //border: 10px solid white();
+    background: #fff url(img/IMG_7492-2-m.jpg) 50% 50% no-repeat;
+    @include media {
+        background-image: url(img/IMG_1894-2.jpg);
+    }
+    background-size: cover;
+    user-select: none;
+
+    .SectionCover__summary {
+        //background-image: linear-gradient(top, white(0) 0%, white(0.7) 40%, white(0.9) 100%);
+        background-image: linear-gradient(top, white(0) 0%, white(.8) 60%, white(.8) 100%);
+        bottom: 0;
+        left: 0;
+        padding: 10em 0 2em;
+        @include media {
+            padding: 15em 0 4em;
+        }
+
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        text-align: right;
+        h1 {
+            @include hg(26, 32);
+            font-weight: 400;
+            strong {
+                font-weight: 700;
+            }
+        }
+        p {
+            hyphens: none;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.SocialIcon {
+    display: inline-block;
+    margin-top: 10px;
+    opacity: .5;
+    transition: .2s;
+}
+
+.SocialIcon:hover {
+    opacity: 1;
+}
+
+.SocialIcon a {
+    display: inline-block;
+    padding: 4px;
+    @include font-size(20, 20);
+    border-radius: 4px;
+}
+
+.SocialIcon a:hover {
+    text-decoration: none;
+}

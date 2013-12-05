@@ -1,0 +1,128 @@
+// GLOBAL VARIABLE
+
+//COLOR
+$text-color: #222;
+//$quiet-color: #999;
+$heading-color: #000;
+
+//TYPOGRAPHY
+$base-font-size-mobile: 16;
+$base-font-size-desktop: 18; //min-width: 30em
+$base-line-height: 1.5;
+
+$link-color: #d54aaf;
+$link-hover-color: saturate(#d54aaf, 20%);
+$link-visited-color: purple;
+
+
+//MEDIA QUERY
+
+@mixin media {
+    @media all and (min-width: $media-query) {
+        @content;
+    }
+}
+
+
+// PX to EM
+
+@function pxToEm($size, $device: '') {
+    @if $device == 'x2' {
+        @return $size / $base-font-size-desktop + em;
+    }
+    @else {
+        @return $size / $base-font-size-mobile + em;
+    }
+}
+
+
+// WIDTH
+$media-query: pxToEm(660);
+
+
+// FONT SIZE
+
+@mixin font-size($mobile, $desktop: "") {
+    font-size: pxToEm($mobile);
+    @if $desktop != null and $desktop != "" {
+        @media all and (min-width: $media-query) {
+            font-size: pxToEm($desktop, 'x2');
+        }
+    }
+}
+
+
+// FONT SMALL
+
+@mixin font-small {
+    @include font-size(12, 12);
+}
+
+
+// HEAD TITLE TYPOGRAPHY
+
+@mixin hg($mobile, $desktop: "") {
+    @if $desktop != null and $desktop != "" {
+        @include font-size($mobile, $desktop);
+    }
+    @else {
+        @include font-size($mobile);
+    }
+    margin-bottom: 10px;
+}
+
+
+// GLOBAL HOVER STATE
+
+@mixin hover {
+    &:hover {
+        color: #DF4747;
+        text-decoration: none;
+    }
+}
+
+// 500-i - 700,i
+@mixin base-font-family($font-style: 500) {
+    font-family: "ff-meta-serif-web-pro", Georgia, Cambria, serif;
+    @if $font-style == 500 {
+        font-weight: 500;
+    }
+    @else if $font-style == 500i {
+        font-weight: 500;
+        font-style: italic;
+    }
+    @else if $font-style == 700 {
+        font-weight: 700;
+    }
+    @else if $font-style == 700i {
+        font-weight: 700;
+        font-style: italic;
+    }
+}
+
+// 400,i - 700,i
+@mixin title-font-family($font-style: 700) {
+    font-family: "ff-meta-web-pro", sans-serif;
+    @if $font-style == 400 {
+        font-weight: 400;
+    }
+    @else if $font-style == 400i {
+        font-weight: 400;
+        font-style: italic;
+    }
+    @else if $font-style == 700 {
+        font-weight: 700;
+    }
+    @else if $font-style == 700i {
+        font-weight: 700;
+        font-style: italic;
+    }
+}
+
+@function black($opacity: 1) {
+    @return rgba(0, 0, 0, $opacity);
+}
+
+@function white($opacity: 1) {
+    @return rgba(255, 255, 255, $opacity);
+}

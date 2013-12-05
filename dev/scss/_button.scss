@@ -1,0 +1,53 @@
+/*! suit-button v3.0.0 | MIT License | github.com/suitcss */
+
+.Button {
+    -webkit-appearance: none;
+    /* 1 */
+    background: transparent;
+    border: 1px solid #ccc;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    @include title-font-family(400);
+    margin: 0;
+    padding: 0 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    white-space: normal;
+    border-radius: 3px;
+    transition: .2s;
+}
+
+/**
+ * UI states
+ */
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+    text-decoration: none;
+    border-color: #DF4747;
+    color: #DF4747;
+}
+
+.Button:disabled,
+.Button.is-disabled {
+    cursor: default;
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.Button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

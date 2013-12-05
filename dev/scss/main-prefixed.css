@@ -765,7 +765,7 @@ h6 {
  */
 
 .SectionCover {
-  background: white url(img/IMG_7492-2-m.jpg) 50% 50% no-repeat;
+  background: white url(img/CoverPhoto--mobile.jpg) 50% 50% no-repeat;
   background-size: cover;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -775,7 +775,7 @@ h6 {
 
 @media all and (min-width: 41.25em) {
   .SectionCover {
-    background-image: url(img/IMG_1894-2.jpg);
+    background-image: url(img/CoverPhoto.jpg);
   }
 }
 

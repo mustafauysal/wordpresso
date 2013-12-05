@@ -5,9 +5,9 @@
 
 .SectionCover {
     //border: 10px solid white();
-    background: #fff url(img/IMG_7492-2-m.jpg) 50% 50% no-repeat;
+    background: #fff url(img/CoverPhoto--mobile.jpg) 50% 50% no-repeat;
     @include media {
-        background-image: url(img/IMG_1894-2.jpg);
+        background-image: url(img/CoverPhoto.jpg);
     }
     background-size: cover;
     user-select: none;

@@ -7,55 +7,30 @@
 		foreach ( $myposts as $post ) : setup_postdata( $post );
 
 			// first-tag
-			$posttags = get_the_tags();
+			$posttags = array_values( get_the_tags() );
 			$postTag;
 			$count = 0;
-			if ( $posttags ) {
-				foreach ( $posttags as $tag ) {
-					$count ++;
-					if ( 1 == $count ) {
-						$postTag = $tag->name;
-					}
-				}
-			}
+			
+            if ( $posttags )
+                $postTag = $posttags[0]->name;
+                
+                $icon_figure = array(
+                'instagram-photo-like' => array('icon-color' => 'instagram','figure' => true),
+                'instagram-video-like' => array('icon-color' => 'instagram','figure' => true),
+                'instagram-photo-share' => array('icon-color' => 'instagram','figure' => true),
+                'instagram-video-share' => array('icon-color' => 'instagram','figure' => true),
+                'vimeo-video-favorite' => array('icon-color' => 'vimeo-square','figure' => false),
+                'youtube-video-favorite' => array('icon-color' => 'youtube-play','figure' => false),
+                'soundcloud-track-favorite' => array('icon-color' => 'rss','figure' => true),
+                'facebook-status-share' => array('icon-color' => 'facebook','figure' => false),
+                'facebook-status-share' => array('icon-color' => 'facebook','figure' => false),
+                );
+			
 
 			$iconColor = "rss";
 			$figure    = false;
 
 			switch ( $postTag ) {
-				case 'instagram-photo-like':
-					$iconColor = "instagram";
-					$figure    = true;
-					break;
-				case 'instagram-video-like':
-					$iconColor = "instagram";
-					$figure    = true;
-					break;
-				case 'instagram-photo-share':
-					$iconColor = "instagram";
-					$figure    = true;
-					break;
-				case 'instagram-video-share':
-					$iconColor = "instagram";
-					$figure    = true;
-					break;
-				case 'vimeo-video-favorite':
-					$iconColor = "vimeo-square";
-					break;
-				case 'youtube-video-favorite':
-					$iconColor = "youtube-play";
-					break;
-				case 'foursquare-checkin':
-					$iconColor = "foursquare";
-					$figure    = true;
-					break;
-				case 'soundcloud-track-favorite':
-					$iconColor = "rss";
-					$figure    = true;
-					break;
-				case 'facebook-status-share':
-					$iconColor = "facebook";
-					break;
 				case 'facebook-link-share':
 					$iconColor = "facebook";
 					break;

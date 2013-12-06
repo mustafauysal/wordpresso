@@ -11,7 +11,27 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     
-    <title>Title</title>
+    <title><?php
+        /*
+        * Print the <title> tag based on what is being viewed.
+        */
+        global $page, $paged;
+
+        wp_title( '|', true, 'right' );
+
+        // Add the blog name.
+        bloginfo( 'name' );
+
+        // Add the blog description for the home/front page.
+        $site_description = get_bloginfo( 'description', 'display' );
+        if ( $site_description && ( is_home() || is_front_page() ) )
+            echo " | {$site_description}";
+
+        // Add a page number if necessary:
+        if ( $paged >= 2 || $page >= 2 )
+            echo ' | ' . sprintf( __( 'Page %s', 'wordpresso' ), max( $paged, $page ) );
+
+    ?></title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">

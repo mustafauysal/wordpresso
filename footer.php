@@ -16,7 +16,7 @@
 		e.src = '//www.google-analytics.com/analytics.js';
 		r.parentNode.insertBefore(e, r)
 	}(window, document, 'script', 'ga'));
-	ga('create', 'UA-17768654-1');
+	ga('create', '<?php echo get_option('wordpresso_google_analytics_track_code'); ?>');
 	ga('send', 'pageview');
 </script>
 </body>

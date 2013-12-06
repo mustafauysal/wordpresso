@@ -17,5 +17,5 @@
 		<a class="Button Section__button">TÜM YAZILAR</a>
 	</div>
 	<!-- /.BlogPost_archive -->
-	
+
 </div>

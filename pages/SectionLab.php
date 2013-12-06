@@ -4,25 +4,26 @@
 
 	<ul>
 		<?php
-		$args = array('category_name' => 'lab', 'order' => 'ASC', 'posts_per_page' => 10);
-		$myposts = get_posts($args);
-		foreach ($myposts as $post) : setup_postdata($post);?>
+		$args = array( 'category_name' => 'lab', 'order' => 'ASC', 'posts_per_page' => 10 );
+		$myposts = get_posts( $args );
+		foreach ( $myposts as $post ) : setup_postdata( $post );?>
 
-		<li>
-			<h4><a href=""><?php the_title(); ?></a></h4>
-			<?php the_content(false);
+			<li>
+				<h4><a href=""><?php the_title(); ?></a></h4>
+				<?php the_content( false );
 
-			$caps = get_post_meta($post->ID, 'lab-caps', true);
-			$link = get_post_meta($post->ID, 'lab-link', true);
-            if (!empty($caps)) { ?>
-            <figure>
-				<a href="<?php echo $link; ?>" alt=""><img src="<?php echo $caps; ?>" alt=""></a>
-			</figure>
-            <?php } else { ?>
-				<a href="<?php echo $link; ?>" alt=""></a>
-            <?php } ?>
+				$caps = get_post_meta( $post->ID, 'lab-caps', true );
+				$link = get_post_meta( $post->ID, 'lab-link', true );
+				if ( ! empty( $caps ) ) {
+					?>
+					<figure>
+						<a href="<?php echo $link; ?>" alt=""><img src="<?php echo $caps; ?>" alt=""></a>
+					</figure>
+				<?php } else { ?>
+					<a href="<?php echo $link; ?>" alt=""></a>
+				<?php } ?>
 
-		</li>
+			</li>
 
 		<?php endforeach;
 		wp_reset_postdata();?>

@@ -806,31 +806,28 @@ h6 {
   .Event .Event__content {
     z-index: 2;
     position: relative;
-    padding: 15px 30px 60px;
-    height: 100%; }
+    padding: 15px 30px; }
   .Event .Event__title {
     font-weight: 400;
     font-size: 0.875em;
     line-height: 1;
-    margin-bottom: 6px;
-    color: #555; }
+    margin-bottom: 8px;
+    color: #999; }
     @media all and (min-width: 41.25em) {
       .Event .Event__title {
         font-size: 0.88889em; } }
     .Event .Event__title a {
-      color: #555; }
+      color: #999; }
   .Event .Event__text {
-    font-size: 1.25em;
+    font-size: 1.125em;
     font-style: italic;
     line-height: 1.4;
     margin-bottom: 0; }
     @media all and (min-width: 41.25em) {
       .Event .Event__text {
-        font-size: 1.22222em; } }
+        font-size: 1.11111em; } }
   .Event .Event__time {
-    position: absolute;
-    left: 30px;
-    bottom: 10px;
+    display: none;
     margin-bottom: 0;
     font-size: 0.75em;
     color: #ccc; }

@@ -18,94 +18,71 @@
 			}
 
 			$iconColor = "rss";
-			$action = "paylaştı.";
 			$figure = false;
 
 			switch ($postTag) {
 			    case 'instagram-photo-like':
 			    	$iconColor = "instagram";
-			        $action = "fotoğrafı beğendi.";
 			        $figure = true;
 			        break;
 			    case 'instagram-video-like':
 			    	$iconColor = "instagram";
-			        $action = "videoyu beğendi.";
 			        $figure = true;
 			        break;
 			    case 'instagram-photo-share':
 			    	$iconColor = "instagram";
-			        $action = "fotoğraf paylaştı.";
 			        $figure = true;
 			        break;
 			    case 'instagram-video-share':
 			    	$iconColor = "instagram";
-			        $action = "video paylaştı.";
 			        $figure = true;
 			        break;
-			    case 'vimeo-favorite':
+			    case 'vimeo-video-favorite':
 			    	$iconColor = "vimeo-square";
-			        $action = "videoyu beğendi.";
 			        break;
-			    case 'youtube-favorite':
+			    case 'youtube-video-favorite':
 			    	$iconColor = "youtube-play";
-			        $action = "videoyu favorilere ekledi.";
 			        break;
 			    case 'foursquare-checkin':
 			    	$iconColor = "foursquare";
-			        $action = "yer bildirimi yaptı.";
 			        $figure = true;
 			        break;
-			    case 'soundcloud-favorite':
+			    case 'soundcloud-track-favorite':
 			    	$iconColor = "rss";
-			        $action = "şarkıyı beğendi.";
 			        $figure = true;
 			        break;
 			    case 'facebook-status-share':
 			    	$iconColor = "facebook";
-			        $action = "yazdı.";
 			        break;
 			    case 'facebook-link-share':
 			    	$iconColor = "facebook";
-			        $action = "link paylaştı.";
 			        break;
 			    case 'facebook-photo-share':
 			    	$iconColor = "facebook";
-			        $action = "fotoğraf paylaştı.";
 			        $figure = true;
 			        break;
 			    case 'twitter-tweet-share':
 			    	$iconColor = "twitter";
-			        $action = "yazdı.";
 			        break;
 			    case 'dribbble-shot-share':
 			    	$iconColor = "dribbble";
-			        $action = "tasarım paylaştı.";
 			        $figure = true;
 			        break;
 			    case 'dribbble-shot-like':
 			    	$iconColor = "dribbble";
-			        $action = "tasarımı beğendi.";
 			        $figure = true;
 			        break;
 			    case 'imdb-watchlist-update':
-			    	$iconColor = "rss";
-			        $action = "izleme listesine film ekledi.";
 			        break;
 			    case 'imdb-checkins-update':
-			    	$iconColor = "rss";
-			        $action = "yeni bir film izledi.";
 			        break;
-			    case 'github-starred':
+			    case 'github-repo-starred':
 			    	$iconColor = "github";
-			        $action = "favorilere ekledi.";
-			        break;
-			    case 'github-gist-event':
-			    	$iconColor = "github";
-			        $action = "kod parçası paylaştı.";
 			        break;
 			    case 'behance-work-share':
-			    	$iconColor = "rss";
-			        $action = "çalışma paylaştı.";
+			    	$figure = true;
+			        break;
+			    case 'pocket-add-url':
 			        break;
 			};?>
 
@@ -113,7 +90,7 @@
 				<span class="Event__icon"><i class="fa <?php echo 'fa-'.$iconColor; ?>"></i></span>
 				<div class="Event__content">
 					 <?php the_content(false); ?>
-					 <p class="Event__time"><time title="<?php the_time('j F Y - G:i') ?>" datetime="<?php the_time('Y-m-dTG:i:s') ?>"><?php the_time('j F Y - G:i') ?></time> <?php echo $action; ?></p>
+					 <p class="Event__time"><time title="<?php the_time('j F Y - G:i') ?>" datetime="<?php the_time('Y-m-dTG:i:s') ?>"><?php the_time('j F Y - G:i') ?></time></p>
 				</div>
 				<?php if ($figure): ?>
 				<figure>

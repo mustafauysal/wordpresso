@@ -70,29 +70,26 @@
     .Event__content {
         z-index: 2;
         position: relative;
-        padding: 15px 30px 60px;
-        height: 100%;
+        padding: 15px 30px;
     }
     .Event__title {
         font-weight: 400;
         @include font-size(14, 16);
         line-height: 1;
-        margin-bottom: 6px;
-        color: #555;
+        margin-bottom: 8px;
+        color: #999;
         a {
-            color: #555;
+            color: #999;
         }
     }
     .Event__text {
-        @include font-size(20, 22);
+        @include font-size(18, 20);
         font-style: italic;
         line-height: 1.4;
         margin-bottom: 0;
     }
     .Event__time {
-        position: absolute;
-        left: 30px;
-        bottom: 10px;
+        display: none;
         margin-bottom: 0;
         @include font-size(12, 14);
         color: #ccc;

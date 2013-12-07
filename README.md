@@ -18,7 +18,7 @@ Recetelerin tamamina [buradan](https://ifttt.com/p/ademilter) veya tek tek asagi
 
 #### Aktiflik ekleme listesi
 
-Etiket | Gorunum | Kullanici adi degistir! | Link
+Gorunum | Kullanici adi degistir! | Link
 --- | --- | ---
 instagram'da bir fotoğraf beğendi. | Hayir | [ifttt recetesi](#)
 instagram'da bir video beğendi. | Hayir | [ifttt recetesi](#)

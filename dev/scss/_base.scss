@@ -48,19 +48,21 @@ ul {
  */
 
 [tabindex="-1"]:focus {
-  outline: none !important;
+    outline: none !important;
 }
 
 /* ==========================================================================
    Layout utilities
    ========================================================================== */
-   
+
 .u-cf:before,
 .u-cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
 
 .u-cf:after {
-  clear: both; }
+    clear: both;
+}

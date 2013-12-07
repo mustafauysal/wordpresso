@@ -15,14 +15,6 @@ $link-hover-color: saturate(#d54aaf, 20%);
 $link-visited-color: purple;
 
 
-//MEDIA QUERY
-
-@mixin media {
-    @media all and (min-width: $media-query) {
-        @content;
-    }
-}
-
 
 // PX to EM
 
@@ -36,8 +28,15 @@ $link-visited-color: purple;
 }
 
 
-// WIDTH
-$media-query: pxToEm(660);
+//MEDIA QUERY
+
+$media-query : pxToEm(700);
+
+@mixin media {
+    @media all and (min-width: $media-query) {
+        @content;
+    }
+}
 
 
 // FONT SIZE
@@ -81,14 +80,14 @@ $media-query: pxToEm(660);
     }
 }
 
-// 500-i - 700,i
-@mixin base-font-family($font-style: 500) {
-    font-family: "ff-meta-serif-web-pro", Georgia, Cambria, serif;
-    @if $font-style == 500 {
-        font-weight: 500;
+// 400-i, 700-,i
+@mixin base-font-family($font-style: 400) {
+    font-family: 'PT Serif', Georgia, Cambria, serif;
+    @if $font-style == 400 {
+        font-weight: 400;
     }
-    @else if $font-style == 500i {
-        font-weight: 500;
+    @else if $font-style == 400i {
+        font-weight: 400;
         font-style: italic;
     }
     @else if $font-style == 700 {
@@ -100,9 +99,9 @@ $media-query: pxToEm(660);
     }
 }
 
-// 400,i - 700,i
+// 300, 400, 700
 @mixin title-font-family($font-style: 700) {
-    font-family: "ff-meta-web-pro", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     @if $font-style == 400 {
         font-weight: 400;
     }

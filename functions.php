@@ -38,7 +38,8 @@
     <div class="wrap">  
         <?php screen_icon('themes'); ?> <h2 class="nav-tab-wrapper">Wordpresso Theme Settings 
             <a href="#" class="nav-tab nav-tab-active">Genel Ayarlar</a>
-            <!-- <a href="#" class="nav-tab">Sosyal Hesaplar</a> -->
+            <a href="#" class="nav-tab">Kapak</a>
+            <a href="#" class="nav-tab">Aktivite</a>
         </h2>
 
         <div id="welcome-panel" class="welcome-panel">
@@ -48,56 +49,15 @@
             </div>
         </div>
 
-        <form method="POST" action="">  
-            <table class="form-table">
-                <tr valign="top">
-                    <th scope="row">
-                        <label for="wordpresso_google_analytics_track_code">Google Analytics Code</label>
-                    </th>
-                    <td>
-                        <input type="text" name="wordpresso_google_analytics_track_code" id="wordpresso_google_analytics_track_code" placeholder="UA-17768654-1" value="<?php echo get_option('wordpresso_google_analytics_track_code'); ?>" class="regular-text"/>
-                    </td>
-                </tr>
+        <!-- Genel Ayarlar -->
+        <?php include 'wordpresso-main.php'; ?>
 
-                <!--tr valign="top">
-                    <th scope="row">UI ornek kullanım sekıllerı</th>
-                    <td>
-                        <input name="blogdescription" type="text" id="blogdescription" placeholder="burası placeholder" class="regular-text">
-                        <p class="description">Ornek acıklama alanı.</p>
+        <!-- Kapak -->
+        <?php include 'wordpresso-cover.php'; ?>
 
-                        <label for="deneme1">
-                            <input name="deneme1" type="checkbox" id="deneme1" value=""> Ornek checkbox alanı 1
-                        </label>
+        <!-- Aktivite -->
+        <?php include 'wordpresso-activity.php'; ?>
 
-                        <br>
-                        <label for="deneme2">
-                            <input name="deneme2" type="checkbox" id="deneme2" value="" checked="checked"> Ornek checkbox alanı 2
-                        </label>
-                        <label for="deneme3">
-                            <input name="deneme3" type="number" step="1" min="0" id="deneme3" value="50" class="small-text"> üst seviye yorum olacak şekilde ve varsayılan olarak
-                        </label>
-
-                        <br>
-                        <label for="deneme4">
-                            <input name="deneme4" type="checkbox" id="deneme4" value="" checked="checked"> Ornek checkbox alanı 2
-                        </label>
-                        <label for="deneme5">
-                            <select name="deneme5" id="deneme5">
-                                <option value="newest" selected="selected">son</option>
-                                <option value="oldest">ilk</option>
-                            </select> sayfa gösterilecek şekilde yorumları sayfalara böl
-                        </label>
-
-                        <br>
-                        <small><em>(Bu kısım dıpnot olarak kullanılır)</em></small>
-                    </td>
-                </tr-->
-                
-            </table>
-            <p class="submit">
-                <input type="submit" name="save_wordpresso_settings" id="submit" class="button button-primary" value="Değişiklikleri kaydet">
-            </p>
-        </form>  
     </div>  
 
     <?php 

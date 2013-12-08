@@ -531,7 +531,6 @@ ul {
   margin: 0;
   padding: 0 20px;
   font-size: 14px;
-  letter-spacing: 3px;
   line-height: 40px;
   height: 40px;
   position: relative;
@@ -690,7 +689,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.125em;
+  font-size: 1.25em;
   margin-bottom: 10px;
 }
 
@@ -1007,7 +1006,7 @@ h6 {
   content: '';
   z-index: 1;
   position: absolute;
-  top: 12px;
+  top: 14px;
   left: 0;
   width: 100%;
   border-bottom: 1px solid #eee;
@@ -1015,7 +1014,7 @@ h6 {
 
 @media all and (min-width: 43.75em) {
   .BlogPost__header:before {
-    top: 13px;
+    top: 15px;
   }
 }
 

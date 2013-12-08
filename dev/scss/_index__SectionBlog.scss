@@ -28,12 +28,12 @@
         content: '';
         z-index: 1;
         position: absolute;
-        top: 12px;
+        top: 14px;
         left: 0;
         width: 100%;
         border-bottom: 1px solid #eee;
         @include media {
-            top: 13px;
+            top: 15px;
         }
     }
 }

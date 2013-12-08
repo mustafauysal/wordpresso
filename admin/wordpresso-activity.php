@@ -1,5 +1,4 @@
 <form method="POST" action="">  
-    <p>deneme aktiviti sayfasi</p>
     <table class="form-table">
         <tr valign="top">
             <th scope="row">

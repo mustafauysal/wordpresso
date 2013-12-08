@@ -1,3 +1,14 @@
+<?php
+    if(isset($_POST['save_wordpresso_settings']))
+    {
+        update_option('wordpresso_google_analytics_track_code', $_POST['wordpresso_google_analytics_track_code']);
+    ?>
+    <div id="message" class="updated settings-error"> 
+        <p><strong>Ayarlar kaydedildi.</strong></p>
+    </div>
+    <?php
+    }      
+?>
 <form method="POST" action="">  
     <p>deneme genel ayarlar sayfasi</p>
     <table class="form-table">

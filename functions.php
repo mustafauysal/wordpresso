@@ -23,17 +23,7 @@
     }  
 
     function wordpresso_settings()
-    {
-
-        if(isset($_POST['save_wordpresso_settings']))
-        {
-            update_option('wordpresso_google_analytics_track_code', $_POST['wordpresso_google_analytics_track_code']);
-        ?>
-        <div id="message" class="updated settings-error"> 
-            <p><strong>Ayarlar kaydedildi.</strong></p>
-        </div>
-        <?php
-        }      
+    {   
     ?>
     <div class="wrap">  
         <?php screen_icon('themes'); ?> <h2 class="nav-tab-wrapper">Wordpresso Theme Settings 

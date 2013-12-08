@@ -32,13 +32,6 @@
             <a href="<?php echo get_admin_url(null,'themes.php?page=wordpresso&tab=activity'); ?>" class="nav-tab<?php if(isset($_GET['tab']) && $_GET['tab'] == 'activity'):?> nav-tab-active<?php endif;?>">Aktivite</a>
         </h2>
 
-        <div id="welcome-panel" class="welcome-panel">
-            <div class="welcome-panel-content">
-                <h3>WordPresso’ya hoşgeldiniz!</h3>
-                <p class="about-description">Başlamanız için bir kaç bağlantıyı bir araya getirdik.</p>
-            </div>
-        </div>
-
         <?php
             $template_directory = get_template_directory();
             $tab = isset($_GET['tab'])  ? $_GET['tab'] : 'main';

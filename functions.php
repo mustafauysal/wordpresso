@@ -41,7 +41,7 @@
 
         <?php
             $template_directory = get_template_directory();
-            $tab = isset($_GET['tab'])  ? $_GET['tab'] : 'cover';
+            $tab = isset($_GET['tab'])  ? $_GET['tab'] : 'main';
 
             if(is_file( $file = $template_directory .  '/admin/wordpresso-' . $tab . '.php') || $file = $template_directory .  '/admin/wordpresso-main.php')
                 include $file;

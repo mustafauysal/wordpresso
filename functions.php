@@ -37,9 +37,9 @@
     ?>
     <div class="wrap">  
         <?php screen_icon('themes'); ?> <h2 class="nav-tab-wrapper">Wordpresso Theme Settings 
-            <a href="#" class="nav-tab nav-tab-active">Genel Ayarlar</a>
-            <a href="#" class="nav-tab">Kapak</a>
-            <a href="#" class="nav-tab">Aktivite</a>
+            <a href="<?php echo get_admin_url(null,'themes.php?page=wordpresso'); ?>" class="nav-tab<?php if(!isset($_GET['tab'])):?> nav-tab-active<?php endif;?>">Genel Ayarlar</a>
+            <a href="<?php echo get_admin_url(null,'themes.php?page=wordpresso&tab=cover'); ?>" class="nav-tab<?php if(isset($_GET['tab']) && $_GET['tab'] == 'cover'):?> nav-tab-active<?php endif;?>">Kapak</a>
+            <a href="<?php echo get_admin_url(null,'themes.php?page=wordpresso&tab=activity'); ?>" class="nav-tab<?php if(isset($_GET['tab']) && $_GET['tab'] == 'activity'):?> nav-tab-active<?php endif;?>">Aktivite</a>
         </h2>
 
         <div id="welcome-panel" class="welcome-panel">
@@ -49,14 +49,13 @@
             </div>
         </div>
 
-        <!-- Genel Ayarlar -->
-        <?php include 'wordpresso-main.php'; ?>
+        <?php
+            $template_directory = get_template_directory();
+            $tab = isset($_GET['tab'])  ? $_GET['tab'] : 'cover';
 
-        <!-- Kapak -->
-        <?php include 'wordpresso-cover.php'; ?>
-
-        <!-- Aktivite -->
-        <?php include 'wordpresso-activity.php'; ?>
+            if(is_file( $file = $template_directory .  '/admin/wordpresso-' . $tab . '.php') || $file = $template_directory .  '/admin/wordpresso-main.php')
+                include $file;
+        ?>
 
     </div>  
 

@@ -11,6 +11,6 @@
         </tr>
     </table>
     <p class="submit">
-        <input type="submit" name="save_wordpresso_settings" id="submit" class="button button-primary" value="Değişiklikleri kaydet">
+			<?php submit_button( __( 'Değişiklikleri kaydet', 'WordPresso' ), 'primary', 'save_wordpresso_settings', false ); ?>
     </p>
 </form>
